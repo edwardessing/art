@@ -6,14 +6,14 @@
 
 /*** CSS ***/
 .row {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
 
-    &::before {
-        display: block;
-    }
+	&::before {
+		display: block;
+	}
 }
 
 html {

@@ -15,7 +15,7 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-pagination": "^1.4.0",
     "metalsmith-permalinks": "^0.4.1",
-    "metalsmith-project-images": "^1.0.0",
+    "metalsmith-project-images": "1.0.0",
     "metalsmith-renamer": "^0.3.0",
     "metalsmith-sass": "^1.4.0",
     "metalsmith-serve": "0.0.4",
@@ -23,10 +23,15 @@
     "metalsmith-uglify": "^1.5.1",
     "metalsmith-updated": "^0.1.6",
     "metalsmith-watch": "^1.0.3",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "surge": "latest"
   },
   "scripts": {
-    "move": "mv ./src/CNAME ./build/"
+    "move": "mv ./src/CNAME ./build/",
+    "predeploy": "npm test && npm run build",
+    "deploy": "surge --project $npm_package_main --domain $npm_package_homepage",
+    "predeploy-pr": "npm test && npm run build && npm run build-nofollow",
+    "deploy-pr": "surge --project $npm_package_main"
   },
   "author": {
     "name": "Edward Essing",
