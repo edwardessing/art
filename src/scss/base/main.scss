@@ -1,0 +1,305 @@
+/*******************************************/
+/*******************************************/
+/*/ MAIN /*/
+/*******************************************/
+/*******************************************/
+
+/*** CSS ***/
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  justify-content: center;
+
+    &::before {
+        display: block;
+    }
+}
+
+html {
+	height: auto;
+}
+
+/** * **/
+
+::selection {
+	background: black;
+	color: white;
+	text-shadow:none;
+}
+
+a {
+	outline: none !important
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+*, p,
+h1, h2, h3,
+h4, h5, h6 {
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	font-variant-ligatures: contextual no-historical-ligatures common-ligatures;
+}
+
+/** main **/
+
+html {
+	box-sizing: border-box;
+    overflow: auto;
+}
+
+table {
+	width: 100%;
+	// margin-top: 10px;
+	border-collapse: collapse;
+}
+
+.table-title, .row-title {
+	background: transparent !important;
+	outline: 0;
+	font-size: 1em;
+}
+
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+tr {
+	padding: 10px 0;
+	color: #635C5C;
+	border-bottom: solid 1px rgba(0,0,0,0.1);
+	margin: -1px 0;
+}
+
+td {
+	padding: 4px 4px 4px 0;
+	font-size: 16px;
+	text-align: left;
+
+	&:nth-last-child(1) {
+		text-align: right;
+	}
+
+	&:nth-last-child(2) {
+		margin-bottom: 10px;
+	}
+
+	a {
+		text-decoration: none;
+		color: black !important;
+
+		&:hover {
+			color: red !important;
+		}
+	}
+}
+
+/** responsive **/
+
+$sm: "screen and (max-width : 768px)";
+
+@media #{$sm} {
+
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	td {
+		padding: 0;
+
+		&:before {
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			padding-right: 10px;
+			white-space: nowrap;
+			text-align: left;
+		}
+	}
+
+	.table-title, .row-title {
+		padding-left: 0;
+	}
+	.data-sect { display: none; }
+
+	.dropdown {
+		width: 100%;
+	}
+
+}
+
+/*** CSS ***/
+
+/** * **/
+
+::selection {
+	background: #ff5722;
+	color: white;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background: #ff5722;
+	color: white;
+	text-shadow:none;
+}
+::-moz-selection {
+	background: #ff5722;
+	color: white;
+	text-shadow:none;
+}
+
+/** Type **/
+
+@font-face {
+	// font-family: 'Franklin Gothic';
+	// src: url('../fonts/FranklinGothic-Book-webfont.eot');
+	// src: url('../fonts/FranklinGothic-Book-webfont.eot?#iefix') format('embedded-opentype'),
+	// 	 url('../fonts/FranklinGothic-Book-webfont.woff2') format('woff2'),
+	// 	 url('../fonts/FranklinGothic-Book-webfont.woff') format('woff'),
+	// 	 url('../fonts/FranklinGothic-Book-webfont.ttf') format('truetype'),
+	// 	 url('../fonts/FranklinGothic-Book-webfont.svg#franklin_gothic_fsbook') format('svg');
+	// font-weight: normal;
+	// font-style: normal;
+
+	font-family: 'Siline';
+	src: url('../fonts/Siline-Regular.woff') format('woff'),
+		 url('../fonts/Siline-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+hr {
+	border: 1px solid;
+	border-color: inherit;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+/*-----------*/
+/* gallery */
+/*-----------*/
+
+.gallery img {
+	// max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* pagination */
+
+.pagination {
+	margin: 0 auto;
+	padding: 30px 10px;
+	text-align: center;
+	list-style: none;
+
+	li {
+		display: inline-block;
+		margin: 6px 8px;
+		font-size: 16px !important;
+
+		&.active {
+			text-decoration: underline;
+		}
+
+		> * {
+			padding: 10px;
+			text-decoration: none;
+		}
+	}
+}
+
+/* post nav */
+
+.post-nav {
+	width: 100%;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	cursor: pointer;
+
+	table {
+		width: 100%;
+		table-layout: fixed;
+
+		td {
+			width: 33%;
+			padding: 15px 0;
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+			// color: inherit;
+			font-size: 14px;
+
+			span {
+				display: none;
+			}
+		}
+
+		.return {
+			text-align: center;
+
+			a {
+				font-size: 30px;
+			}
+		}
+
+		.next {
+			text-align: right;
+		}
+	}
+}
+
+/*------------------------------------------------------------------------------------*/
+/* pagination */
+/*------------------------------------------------------------------------------------*/
+
+#next {
+	background: inherit;
+	width: 75%;
+	margin: 24px auto 0;
+	padding: 24px;
+	bottom: 0;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	z-index: 99;
+	border: none;
+	outline: none;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+/** responsive **/
+
+@media screen and (max-device-width: 800px) {
+}
+
+@media screen and (max-width: 800px) {
+	.dropdown {
+		width: 100%;
+	}
+
+	.post-icon {
+		width: 200px;
+		height: 200px;
+		/*margin: 10% auto;*/
+	}
+
+	.icon-area, .text {
+		padding: 10% 0;
+	}
+}

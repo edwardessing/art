@@ -1,0 +1,40 @@
+extends ./partials/_layout
+
+block link
+	-var selected= 'posts';
+
+block content
+	.container
+		each post, i in posts
+			if i < 6
+				.row.gallery(id=post.title)
+					a.col-xs-12(href='/' + post.path)
+						h3(style='margin:0px')= post.title
+						hr
+					each image in post.images
+						a.col-xs-12.col-sm-4.img(href='/#{image}' title='#{image}')
+							img.img-responsive(src='/#{image}' alt='#{image}' title='#{image}')
+
+			else
+
+		//- ul.pagination
+		//- 	if pagination.previous
+		//- 		//- li: a(href='/' + pagination.first.path) First
+		//- 		li: a(href='/' + pagination.previous.path) &larr;
+		//- 	else
+		//- 		li.inactive
+
+		//- 	-var n = 1
+		//- 	while n <= pagination.pages.length
+		//- 		if n == pagination.num
+		//- 			li.page-link.active
+		//- 				a(href='/posts' + '/' + n)= n++
+		//- 		else
+		//- 			li.page-link
+		//- 				a(href='/posts' + '/' + n)= n++
+
+		//- 	if pagination.next
+		//- 		li: a(href='/' + pagination.next.path) &rarr;
+		//- 		//- li: a(href='/' + pagination.last.path) Last
+		//- 	else
+		//- 		li.inactive

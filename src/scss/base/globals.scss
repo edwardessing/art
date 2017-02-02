@@ -1,0 +1,40 @@
+/*******************************************/
+/*/ GLOBALS /*/
+/*******************************************/
+
+/***********************/
+/*/ responsive /*/
+
+$xs: "screen and (max-width : 480px)";
+$sm: "screen and (max-width : 768px)";
+$md: "screen and (max-width : 992px)";
+$lg: "screen and (min-width : 1600px)";
+
+@mixin box-sizing($box-model) {
+	box-sizing: $box-model;
+}
+
+// keyframes
+
+@mixin animation($animate...) {
+	$max: length($animate);
+	$animations: '';
+
+	@for $i from 1 through $max {
+		$animations: #{$animations + nth($animate, $i)};
+
+		@if $i < $max {
+			$animations: #{$animations + ", "};
+		}
+	}
+	animation:         $animations;
+}
+
+@mixin keyframe($animationName) {
+	@keyframes #{$animationName} {
+		@content;
+	}
+}
+
+/***********************/
+/*/ site animations /*/

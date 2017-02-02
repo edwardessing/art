@@ -1,0 +1,17 @@
+extends ./partials/_layout
+
+block link
+	- var selected= 'post';
+
+block content
+	#main.container
+		.intro
+			h3.header!= title
+			hr
+
+		.gallery.row
+			each image in images
+				a.col-xs-12.col-sm-4.img(href='/#{image}' title='#{image}')
+					img.img-responsive(src='/#{image}' alt='#{image}' title='#{image}')
+
+		include ./partials/_post-nav
