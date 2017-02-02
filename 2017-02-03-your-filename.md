@@ -1,1 +1,0 @@
-![]({{site.baseurl}}//Screen%20Shot%202017-02-03%20at%2010.07.23%20am.png)
