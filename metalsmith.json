@@ -1,0 +1,70 @@
+{
+	"source": "src",
+	"destination": "build",
+	"plugins": {
+		"metalsmith-define": {
+			"blog": {
+				"uri": "http://art.edwardessing.com",
+				"title": "Edward Essing Art",
+				"description": "Edward Essing Art"
+			},
+			"owner": {
+				"uri": "http://edwardessing.com",
+				"name": "Edward Essing"
+			},
+			"moment": "require('moment')"
+		},
+		"metalsmith-static": {
+			"src": "assets",
+			"dest": "assets"
+		},
+		"metalsmith-image-resizer": {
+			"glob": "posts/**/*~(detail).*",
+			"width": "1500",
+			"height": "1000"
+		},
+		"metalsmith-project-images": {
+			"pattern": "posts/**/*.md",
+			"imagesDirectory": "images"
+		},
+		"metalsmith-collections": {
+			"pages": {
+				"pattern": "*.md"
+			},
+			"posts": {
+				"pattern": "posts/**/*.md",
+				"sortBy": "date",
+				"reverse": true
+			}
+		},
+		"metalsmith-pagination": {
+			"collections.posts": {
+				"perPage": 6,
+				"first": "posts/index.html",
+				"layout": "posts.jade",
+				"path": "posts/:num/index.html",
+				"pageMetadata": {
+					"title": "Archive"
+				}
+			}
+		},
+		"metalsmith-markdown": {
+			"gfm": true,
+			"tables": true
+		},
+		"metalsmith-permalinks": {
+			"pattern": "./:collection/:title",
+			"relative": true
+		},
+		"metalsmith-layouts": {
+			"engine": "jade",
+			"directory": "layouts",
+			"partials": "partials",
+			"default": "post.jade",
+			"pattern": "**/*.html"
+		},
+		"metalsmith-updated": {
+			"filePatterns": "posts/*"
+		}
+	}
+}

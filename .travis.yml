@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "7.4.0"
+script:
+  - npm run build
+after_success:
+  - surge --project ./build/ --domain art.edwardessing.com
