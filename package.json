@@ -41,8 +41,8 @@
     "watch-js": "onchange './src/**/*.js' -- npm run build-js -- -dv",
     "sync": "browser-sync start --files './build/css/*.css' --server \"build\" --no-open",
     "start": "npm run build && npm run watch-html & npm run watch-css & npm run watch-js & npm run sync",
-    "deploy": "surge --project ./build/ --domain shrine.edwardessing.com",
-    "stage": "surge --project ./build/ --domain shrine.edwardessing.com"
+    "deploy": "surge --project ./build/ --domain art.edwardessing.com",
+    "stage": "surge --project ./build/ --domain art.edwardessing.com"
   },
   "author": "Edward Essing <edwardessing@gmail.com> (http://www.edwardessing.com)",
   "main": "build.js"
