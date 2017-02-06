@@ -18,11 +18,6 @@
 			"src": "assets",
 			"dest": "assets"
 		},
-		"metalsmith-image-resizer": {
-			"glob": "posts/**/*~(detail).*",
-			"width": "1500",
-			"height": "1000"
-		},
 		"metalsmith-project-images": {
 			"pattern": "posts/**/*.md",
 			"imagesDirectory": "images"
