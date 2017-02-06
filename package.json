@@ -26,6 +26,7 @@
     "moment": "^2.6.0",
     "node-sass": "^4.5.0",
     "onchange": "^3.2.1",
+    "sharp": "^0.17.1",
     "surge": "^0.18.0",
     "travis-ci": "^2.1.1"
   },
