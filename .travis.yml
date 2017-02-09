@@ -6,4 +6,4 @@ script:
 after_success:
   - surge --project ./build/ --domain art.edwardessing.com
 before_install:
-  - PATH=`ls -d /usr/lib/x86_64-linux-gnu/ImageMagick-*/bin-Q16 | head -n 1`:$PATH PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig npm install --save imagemagick-native
+  - PATH=`ls -d /usr/lib/\`uname -p\`-linux-gnu/ImageMagick-*/bin-Q16 | head -n 1`:$PATH PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig npm install --save imagemagick-native
