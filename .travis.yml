@@ -6,5 +6,5 @@ script:
 after_success:
   - surge --project ./build/ --domain art.edwardessing.com
 before_install:
-  - npm install imagemagick-native
+  - npm install imagemagick
   - PKG_CONFIG_PATH=/opt/ImageMagick/lib/pkgconfig npm install --save imagemagick-native
