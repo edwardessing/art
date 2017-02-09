@@ -6,5 +6,6 @@ script:
 after_success:
   - surge --project ./build/ --domain art.edwardessing.com
 before_install:
-  - npm install imagemagick
+  - sudo apt-get install libmagick++-dev
+  - sudo ln -s `ls /usr/lib/\`uname -p\`-linux-gnu/ImageMagick-*/bin-Q16/Magick++-config | head -n 1` /usr/local/bin/
   - PKG_CONFIG_PATH=/opt/ImageMagick/lib/pkgconfig npm install --save imagemagick-native
