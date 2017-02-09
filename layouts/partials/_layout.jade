@@ -7,7 +7,6 @@ html(lang='en')
 		link(rel='shortcut', href='/img/art-fav.ico')
 		link(rel='icon', href='/img/art-fav.ico')
 		link(rel='stylesheet', href='/css/master.css')
-		link(rel='stylesheet', href='/css/app.css')
 
 		script(src='/js/jquery.min.js')
 		script(src='/js/script.js')
@@ -26,7 +25,7 @@ html(lang='en')
 		block script
 
 		script.
-			$('img').each(function() {
+			$('.img-thumb').each(function() {
 				var path = $(this).attr("alt");
 				var filename = path.replace(/^.*[\\\/]/, '');
 				var caption = filename.replace(/\.[^/.]+$/, "")
@@ -43,6 +42,10 @@ html(lang='en')
 					"padding": "10px 0 40px"
 				}).insertAfter(this);
 				}
+
+				$(this).attr('src', function(index, attr) {
+					return attr.replace(/\.[^.]*$/, '_thumb$&');
+				});
 			});
 
 			$('.gallery').magnificPopup({

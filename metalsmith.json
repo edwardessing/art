@@ -18,9 +18,13 @@
 			"src": "assets",
 			"dest": "assets"
 		},
-		"metalsmith-project-images": {
-			"pattern": "posts/**/*.md",
-			"imagesDirectory": "images"
+		"metalsmith-convert": {
+			"src": "posts/**/images/**/*",
+			"resize": {
+				"width": 500,
+				"resizeStyle": "aspectfit"
+			},
+			"nameFormat": "%b_thumb%e"
 		},
 		"metalsmith-collections": {
 			"pages": {
@@ -32,12 +36,16 @@
 				"reverse": true
 			}
 		},
+		"metalsmith-project-images": {
+			"pattern": "posts/**/*.md",
+			"imagesDirectory": "images"
+		},
 		"metalsmith-pagination": {
 			"collections.posts": {
 				"perPage": 6,
-				"first": "posts/index.html",
+				"first": "index.html",
 				"layout": "posts.jade",
-				"path": "posts/:num/index.html",
+				"path": ":num/index.html",
 				"pageMetadata": {
 					"title": "Archive"
 				}

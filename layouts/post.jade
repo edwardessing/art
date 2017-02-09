@@ -12,6 +12,6 @@ block content
 		.gallery.row
 			each image in images
 				a.col-xs-12.col-sm-4.img(href='/#{image}' title='#{image}')
-					img.img-responsive(src='/#{image}' alt='#{image}' title='#{image}')
+					img.img-responsive.img-thumb(src='/#{image}' alt='#{image}' title='#{image}')
 
 		include ./partials/_post-nav

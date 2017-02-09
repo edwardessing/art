@@ -1,3 +1,4 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 $(document).ready(function() {
 
 /* signature */
@@ -165,23 +166,23 @@ $(document).ready(function() {
 	$('.row-selected').val(storedRow);
 
 
-	/* 6 items fix */
-		(function($) {
-			var $window = $(window),
-				$cover = $('.gallery .img');
+/* 6 items fix */
+	(function($) {
+		var $window = $(window),
+			$cover = $('.gallery .img');
 
-			function resize() {
-				if ($window.width() < 720 && $cover.hasClass('col-sm-2')) {
-					$cover.removeClass('col-sm-2');
-					$cover.addClass('col-sm-3');
-				}
+		function resize() {
+			if ($window.width() < 720 && $cover.hasClass('col-sm-2')) {
+				$cover.removeClass('col-sm-2');
+				$cover.addClass('col-sm-3');
 			}
+		}
 
-			$window
-				.resize(resize)
-				.trigger('resize');
-		})(jQuery);
-
+		$window
+			.resize(resize)
+			.trigger('resize');
+	})(jQuery);
 
 /* script end */
 });
+},{}]},{},[1]);

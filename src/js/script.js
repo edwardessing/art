@@ -165,23 +165,22 @@ $(document).ready(function() {
 	$('.row-selected').val(storedRow);
 
 
-	/* 6 items fix */
-		(function($) {
-			var $window = $(window),
-				$cover = $('.gallery .img');
+/* 6 items fix */
+	(function($) {
+		var $window = $(window),
+			$cover = $('.gallery .img');
 
-			function resize() {
-				if ($window.width() < 720 && $cover.hasClass('col-sm-2')) {
-					$cover.removeClass('col-sm-2');
-					$cover.addClass('col-sm-3');
-				}
+		function resize() {
+			if ($window.width() < 720 && $cover.hasClass('col-sm-2')) {
+				$cover.removeClass('col-sm-2');
+				$cover.addClass('col-sm-3');
 			}
+		}
 
-			$window
-				.resize(resize)
-				.trigger('resize');
-		})(jQuery);
-
+		$window
+			.resize(resize)
+			.trigger('resize');
+	})(jQuery);
 
 /* script end */
 });
