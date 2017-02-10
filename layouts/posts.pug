@@ -12,12 +12,13 @@ block content
 						h3(style='margin:0px')= post.title
 						hr
 					each image in post.images
-						a.col-xs-12.col-sm-4.img(href='/#{image}' title='#{image}')
-							img.img-responsive.img-thumb(src='/#{image}' alt='#{image}' title='#{image}')
+						a.col-xs-12.col-sm-4.img(href='/' + image title=image)
+							img.img-responsive.img-thumb(src='/' + image alt=image title=image)
 
 			else
 
 		ul.pagination
+			hr
 			if pagination.previous
 				//- li: a(href='/' + pagination.first.path) First
 				li: a(href='/' + pagination.previous.path) &larr;

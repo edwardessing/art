@@ -12,7 +12,7 @@ prose:
         field:
           element: 'hidden'
           label: 'Template'
-          value: 'post.jade'
+          value: 'post.pug'
       - name: "date"
         field:
           element: "text"
