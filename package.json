@@ -21,7 +21,7 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-pagination": "^1.4.0",
     "metalsmith-permalinks": "^0.4.1",
-    "metalsmith-project-images": "^1.0.0",
+    "metalsmith-project-images": "1.0.0",
     "metalsmith-renamer": "^0.3.0",
     "metalsmith-serve": "0.0.4",
     "metalsmith-static": "0.0.5",
