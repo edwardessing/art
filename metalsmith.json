@@ -39,10 +39,10 @@
 		},
 		"metalsmith-pagination": {
 			"collections.posts": {
-				"perPage": 6,
-				"first": "index.html",
-				"layout": "index.pug",
-				"path": ":num/index.html",
+				"perPage": 1,
+				"first": "posts/index.html",
+				"layout": "posts.pug",
+				"path": "posts/:num/index.html",
 				"pageMetadata": {
 					"title": "Archive"
 				}

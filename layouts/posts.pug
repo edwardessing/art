@@ -5,20 +5,17 @@ block link
 
 block content
 	.container
-		each post, i in posts
-			if i < 6
-				.row.gallery(id=post.title style='margin-bottom:40px;')
-					a.col-xs-12(href='/' + post.path)
-						h3(style='margin:0px')= post.title
-						hr
-					each image in post.images
-						a.col-xs-12.col-sm-4.img(href='/' + image title=image)
-							img.img-responsive.img-thumb(src='/' + image alt=image title=image)
+		each file in pagination.files
+			.row.gallery(id=file.title style='margin-bottom:40px;')
+				a.col-xs-12(href='/' + file.path)
+					h3(style='margin:0px')= file.title
+					hr
+				each image in file.images
+					a.col-xs-12.col-sm-4.img(href='/' + image title=image)
+						img.img-responsive.img-thumb(src='/' + image alt=image title=image)
 
-			else
 
 		ul.pagination
-			hr
 			if pagination.previous
 				//- li: a(href='/' + pagination.first.path) First
 				li: a(href='/' + pagination.previous.path) &larr;
@@ -29,10 +26,10 @@ block content
 			while n <= pagination.pages.length
 				if n == pagination.num
 					li.page-link.active
-						a(href='/' + n)= n++
+						a(href='/posts' + '/' + n)= n++
 				else
 					li.page-link
-						a(href='/' + n)= n++
+						a(href='/posts' + '/' + n)= n++
 
 			if pagination.next
 				li: a(href='/' + pagination.next.path) &rarr;
