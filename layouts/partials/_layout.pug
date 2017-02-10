@@ -25,6 +25,47 @@ html(lang='en')
 		block script
 
 		script.
+			$(function() {
+
+				var imgStack;
+				var loadTimeout;
+
+				$(window).scroll(function() {
+					 imgStack = null;
+					 if (loadTimeout) clearTimeout(loadTimeout);
+
+					 loadTimeout = setTimeout(function() {
+
+						// get all links visible in the view port
+						// should be an array or jQuery object
+						var images = document.getElementsByTagName('img');
+						var srcList = [];
+						for(var i = 0; i < images.length; i++) {
+						    srcList.push(images[i].src);
+						}
+						imgStack = srcList
+
+						loadNextImage();
+					 }, 200);                // 200 ms delay
+				});
+
+				function loadNextImage() {
+					 if (imgStack && imgStack.length) {
+						var nextLink = $(imgStack.pop());   // get next image element
+
+						$('<img />').attr('src', nextLink.attr('href'))
+						.appendTo(nextLink.parent())
+						.load(function() {
+							 loadNextImage();
+						});
+
+						// remove link from container (so we don't precess it twice)
+						nextLink.remove();
+					 }
+				};
+
+			});
+
 			$('.img-thumb').each(function() {
 				var path = $(this).attr("alt");
 				var filename = path.replace(/^.*[\\\/]/, '');
