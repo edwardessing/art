@@ -44,7 +44,7 @@
 				"layout": "posts.pug",
 				"path": "posts/:num/index.html",
 				"pageMetadata": {
-					"title": "Archive"
+					"title": "posts"
 				}
 			}
 		},
@@ -57,7 +57,7 @@
 			"tables": true
 		},
 		"metalsmith-permalinks": {
-			"pattern": "./:collection/:title",
+			"pattern": ":collection/:title",
 			"relative": true
 		},
 		"metalsmith-layouts": {
