@@ -69,6 +69,10 @@
 		},
 		"metalsmith-updated": {
 			"filePatterns": "posts/*"
+		},
+		"contentful-metalsmith": {
+			"access_token": "e4aadb7721dab9323b3efda02c6353901c0ce4c0bc486246d76589ce556ead22",
+			"space_id": "s6epp7cvcgl6"
 		}
 	}
 }
