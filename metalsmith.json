@@ -58,7 +58,7 @@
 		},
 		"metalsmith-permalinks": {
 			"pattern": ":collection/:title",
-			"relative": true
+			"relative": false
 		},
 		"metalsmith-layouts": {
 			"engine": "pug",

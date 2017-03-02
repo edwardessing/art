@@ -1,5 +1,4 @@
 prose:
-    # Configurations ...
   rooturl: 'src'
   siteurl: 'http://art.edwardessing.com/'
   metadata:
