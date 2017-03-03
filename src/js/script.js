@@ -186,7 +186,9 @@ $(document).ready(function() {
 $('.img-thumb').each(function() {
 	var path = $(this).attr("alt");
 	var filename = path.replace(/^.*[\\\/]/, '');
+	var ext = filename.split('.').pop();
 	var caption = filename.replace(/\.[^/.]+$/, "")
+	$(this).parent().prop('href', "/images/" + caption + "_orig." + ext);
 	$(this).parent().prop('title', caption);
 	if (caption != '') {
 	var imgWidth = $(this).width();
