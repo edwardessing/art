@@ -25,7 +25,7 @@
 				"resizeStyle": "aspectfit"
 			},
 			"quality": 50,
-			"nameFormat": "%b_thumb%e",
+			"nameFormat": "%b%e",
 			"renameSourceFormat": "%b_orig%e"
 		},
 		"metalsmith-collections": {

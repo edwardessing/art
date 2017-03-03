@@ -188,24 +188,26 @@ $('.img-thumb').each(function() {
 	var filename = path.replace(/^.*[\\\/]/, '');
 	var ext = filename.split('.').pop();
 	var caption = filename.replace(/\.[^/.]+$/, "")
+	/* original link */
 	$(this).parent().prop('href', "/images/" + caption + "_orig." + ext);
+	/* caption */
 	$(this).parent().prop('title', caption);
 	if (caption != '') {
-	var imgWidth = $(this).width();
-	var imgHeight = $(this).height();
-	var position = $(this).position();
-	var positionTop = (position.top + imgHeight - 26)
-	$("<span class='img-caption'>" + caption + "</span>").css({
-		"display": "block",
-		"width": "100%",
-		"text-align": "center",
-		"padding": "10px 0 40px"
-	}).insertAfter(this);
+		var imgWidth = $(this).width();
+		var imgHeight = $(this).height();
+		var position = $(this).position();
+		var positionTop = (position.top + imgHeight - 26)
+		$("<span class='img-caption'>" + caption + "</span>").css({
+			"display": "block",
+			"width": "100%",
+			"text-align": "center",
+			"padding": "10px 0 40px"
+		}).insertAfter(this);
 	}
 
-	$(this).attr('src', function(index, attr) {
-		return attr.replace(/\.[^.]*$/, '_thumb$&');
-	});
+	// $(this).attr('src', function(index, attr) {
+	// 	return attr.replace(/\.[^.]*$/, '_thumb$&');
+	// });
 });
 
 /* script end */
