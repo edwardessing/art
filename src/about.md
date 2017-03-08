@@ -4,4 +4,4 @@ layout: about.pug
 permalink: false
 ---
 
-Born 1992. Based in Sydney, currently studying at Julian Ashton.
+Based in Sydney, currently attending Julian Ashton Monday, Wednesday, Thursday nights.

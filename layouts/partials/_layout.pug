@@ -19,9 +19,12 @@ html(lang='en')
 		include ./_nav
 		#container
 			.container
-				.header.row
-					.col-xs-12(style='margin:50px auto;'): a(href='/') Edward Essing &mdash; Art
+				.header.row(style='margin:50px auto;')
+					.col-xs-12.col-sm-6(style='margin:10px auto; padding:0;'): a(href='/') Edward Essing &mdash; Art
+					.col-xs-12.col-sm-6(style='margin:10px auto; padding:0; text-align:right;'): a(href='/about.html') About
 			block content
+			.container
+				p(style='margin:100px auto;') All enquiries: <a href='mailto:edwardessing@gmail.com'>edwardessing@gmail.com</a> or 0488 201 202
 		block script
 
 		script.
