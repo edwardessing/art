@@ -4,4 +4,4 @@ layout: about.pug
 permalink: false
 ---
 
-Based in Sydney, currently attending Julian Ashton Monday, Wednesday, Thursday nights.
+Currently attending Julian Ashton Artschool on Monday, Wednesday, Thursday nights.
