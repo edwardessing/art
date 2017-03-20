@@ -18,15 +18,20 @@
 			"src": "assets",
 			"dest": "assets"
 		},
-		"metalsmith-convert": {
+		"metalsmith-sharp": {
 			"src": "posts/**/images/**/*",
-			"resize": {
-				"width": 500,
-				"resizeStyle": "aspectfit"
-			},
-			"quality": 50,
-			"nameFormat": "%b%e",
-			"renameSourceFormat": "%b_orig%e"
+			"namingPattern": "{dir}/thumbs/{name}-thumb{ext}",
+			"methods": [
+				{
+					"name": "resize",
+					"args": [ 500 ]
+				},
+				{
+					"name": "quality",
+					"args": [ 50 ]
+				}
+			],
+			"moveFile": false
 		},
 		"metalsmith-collections": {
 			"pages": {
