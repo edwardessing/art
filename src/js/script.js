@@ -185,10 +185,12 @@ $(document).ready(function() {
 /* image thumbnails + captions */
 $('.img-thumb').each(function() {
 	var path = $(this).attr("alt");
+	var directory = path.replace(/[^\/]*$/, '');
 	var filename = path.replace(/^.*[\\\/]/, '');
 	var ext = filename.split('.').pop();
-	var caption = filename.replace(/\.[^/.]+$/, "")
+	var caption = filename.replace(/\.[^/.]+$/, '')
 	/* original link */
+	$(this).prop('src', directory + "/thumbs/" + caption + "-thumb." + ext);
 	// $(this).parent().prop('href', "/images/" + caption + "." + ext);
 	/* caption */
 	$(this).parent().prop('title', caption);

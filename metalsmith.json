@@ -30,8 +30,7 @@
 					"name": "quality",
 					"args": [ 50 ]
 				}
-			],
-			"moveFile": false
+			]
 		},
 		"metalsmith-collections": {
 			"pages": {
