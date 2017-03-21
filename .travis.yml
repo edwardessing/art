@@ -8,12 +8,12 @@ after_success:
 # before_install:
 #   - sudo apt-get install -y imagemagick
 #   - sudo apt-get install -y libmagick++-dev
-# sudo: required
-# env:
-#   - CXX=g++-4.8
-# addons:
-#   apt:
-#     sources:
-#     - ubuntu-toolchain-r-test
-#     packages:
-#     - g++-4.8
+sudo: required
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
