@@ -190,7 +190,7 @@ $('.img-thumb').each(function() {
 	var ext = filename.split('.').pop();
 	var caption = filename.replace(/\.[^/.]+$/, '')
 	/* original link */
-	$(this).prop('src', directory + "/thumbs/" + caption + "-thumb." + ext);
+	$(this).prop('src', '/' + directory + "/thumbs/" + caption + "-thumb." + ext);
 	// $(this).parent().prop('href', "/images/" + caption + "." + ext);
 	/* caption */
 	$(this).parent().prop('title', caption);
