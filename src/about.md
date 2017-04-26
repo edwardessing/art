@@ -4,4 +4,4 @@ layout: about.pug
 permalink: false
 ---
 
-Currently attending Julian Ashton Artschool on Monday, Wednesday, Thursday nights.
+Currently attending Julian Ashton Artschool most weeknights.
