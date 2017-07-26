@@ -4,4 +4,4 @@ layout: about.pug
 permalink: false
 ---
 
-Currently attending Julian Ashton Artschool most weeknights.
+Currently attending Julian Ashton Artschool.
