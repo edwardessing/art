@@ -1,0 +1,82 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: jekyll portfolio
+email: edwardessing@gmail.com
+description:
+baseurl: ''
+url: '' # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+# Server Config options
+livereload: true     # You no longer need to include --livereload:
+                     # jekyll serve -L
+reload_port: 5678    # If you don't want to use the default port
+
+# Sass
+sass:
+  style: compressed
+
+# Defaults
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      categories: ''
+      tags: []
+      featured-image: ''
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+      featured-image: ''
+  - scope:
+      path: ''
+      type: galleries
+    values:
+      layout: gallery
+      tags: []
+      featured-image: ''
+      homepage-thumbnail: ''
+
+# Collections
+collections:
+  galleries:
+    output: true
+    permalink: /:collection/:path/
+
+autopages:
+  enabled: false
+
+permalink: pretty
+
+exclude: [LICENSE-CODE.md, LICENSE-IMAGES, README.md, bower.json]
+
+# Assets
+# assets:
+#   prefix: "/assets"
+#   digest: true
+#   assets:
+#     - "*.JPG"
+#     - "bundle.css"
+#   sources:
+#     - "css"
+#     - "js"
+#     - "assets"
+#   features:
+#     liquid: false
+#     integrity: false
+#     # This will add height and width attributes for an img tag.
+#     automatic_img_size: true
+#     # This will add the digest path as an alt attribute for an img tag.
+#     automatic_img_alt: true

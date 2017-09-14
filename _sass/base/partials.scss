@@ -1,0 +1,162 @@
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+/* partials */
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------*/
+/* nav */
+/*------------------------------------------------------------------------------------*/
+
+#menu {
+	position: fixed;
+	background: white !important;
+	font-size: 100% !important;
+	z-index: 9999;
+}
+	#menu * {
+		background: none;
+	}
+	#menu a {
+		color: black;
+	}
+	#menu * a:hover,
+	#menu * a:active {
+		color: #ff5722 !important;
+	}
+
+#menu .menu-link {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	top: 0;
+	right: 0;
+	text-align: center;
+	font-size: 60px;
+	line-height: 60px;
+	z-index: 9999;
+	padding: 0px;
+	border: 0px;
+
+	&:hover {
+		text-decoration: none !important;
+		cursor: pointer !important;
+	}
+
+	&:before {
+		content: "+";
+	}
+}
+
+.menu-link, .dropdown, .menu-link:active, .dropdown:active {
+	transition: all 0.2s ease;
+}
+
+.rotate {
+	transform: rotate(45deg);
+}
+
+.dropdown {
+	background: white !important;
+	display: none;
+	position: fixed;
+	width: 400px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	padding: 40px 0;
+	z-index: 999;
+	overflow: scroll;
+
+	@media #{$sm} {
+		width: 100%;
+	}
+}
+
+.active {
+	display: inline-block !important;
+}
+
+.opac {
+	display: inline-block !important;
+	opacity: 0.5;
+}
+
+/*------------------------------------------------------------------------------------*/
+/* style switch */
+/*------------------------------------------------------------------------------------*/
+
+.styleSwitch {
+	text-align: center;
+
+	div {
+
+		p, label {
+			margin-bottom: 0;
+			font-size:10px;
+		}
+	}
+
+	div button {
+		background: grey;
+		min-width: 25px;
+		min-height: 25px;
+		margin: 7.5px 2.5px;
+		text-align: center;
+		border: 1px solid #ccc;
+		outline: 1px solid white;
+		box-shadow: inset 0px 0px 0px 4px white;
+		font-size: 10px !important;
+		color: black;
+	}
+
+	.div {
+		margin: 10px 0 20px;
+	}
+
+	.b-gold { background: #ff5722 !important; }
+	.b-black { background: black !important; }
+	.b-white { background: white !important; }
+}
+
+.gold, .gold * {
+	background: #ff5722;
+	color: black;
+	border-color: black;
+}
+.black, .black * {
+	background: black;
+	color: white;
+	border-color: white;
+}
+.white, .white * {
+	background: white;
+	color: black;
+	border-color: black;
+}
+.t1 {
+	font-size: 10px !important;
+	line-height: normal !important;
+}
+.t2 {
+	font-size: 16px !important;
+	line-height: normal !important;
+}
+.t3 {
+	font-size: 24px !important;
+	line-height: normal !important;
+}
+
+.b1 img {
+	border: 6px solid !important;
+}
+
+.b2 img {
+	border: 6px inset #e0e0e0!important;
+}
+
+/* container text */
+
+.container.black .text { background: black; }
+.container.white .text { background: white; }
+.container.gold .text { background: #ff5722; }

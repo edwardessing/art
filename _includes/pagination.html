@@ -1,0 +1,59 @@
+{% for c in site.galleries %}
+{% if c.title == page.title %}
+	{% assign thisPost = c %}
+	{% if forloop.index == 1 %}
+		{% assign prevflag = 0 %}
+		{% assign nextflag = 1 %}
+	{% elsif forloop.index == forloop.length %}
+		{% assign prevflag = 1 %}
+		{% assign nextflag = 0 %}
+	{% else %}
+		{% assign prevflag = 1 %}
+		{% assign nextflag = 1 %}
+	{% endif %}
+{% endif %}
+{% endfor %}
+
+{% for c in site.galleries %}
+	{% if c.title == page.title %}
+		{% assign prevflag = 0 %}
+	{% endif %}
+	{% if prevflag == 1 %}
+		{% assign prevPost = c %}
+		{% assign page.previous = c %}
+	{% endif %}
+{% endfor %}
+
+{% if nextflag == 1 %}
+	{% for c in site.galleries %}
+		{% if foundPost == 1 %}
+			{% assign getNext = 1 %}
+		{% endif %}
+		{% if c.title == page.title %}
+			{% assign foundPost = 1 %}
+		{% endif %}
+		{% if getNext == 1%}
+			{% assign nextPost = c %}
+			{% assign page.next = c %}
+			{% assign foundPost = 0 %}
+			{% assign getNext = 0 %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+<div id='post-nav row' style='max-width:800px; margin:0 auto; text-align:center;'>
+	<div class='col-xs-6'>
+		{% if prevPost.url %}
+		<a class='prev' href='{{prevPost.url}}'>
+			<span>&larr; {{prevPost.title}}</span>
+		</a>
+		{% endif %}
+	</div>
+	<div class='col-xs-6'>
+		{% if nextPost.url %}
+		<a class='next' href='{{nextPost.url}}'>
+			<span>{{nextPost.title}} &rarr;</span>
+		</a>
+		{% endif %}
+	</div>
+</div>

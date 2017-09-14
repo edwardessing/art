@@ -1,0 +1,17 @@
+current directory: /Users/edward/Sites/jekyll/jekyll-image-gallery-example-gh-pages/_vendor/bundle/ruby/2.2.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/Users/edward/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20170803-9854-1btfxeo.rb extconf.rb
+creating Makefile
+
+current directory: /Users/edward/Sites/jekyll/jekyll-image-gallery-example-gh-pages/_vendor/bundle/ruby/2.2.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /Users/edward/Sites/jekyll/jekyll-image-gallery-example-gh-pages/_vendor/bundle/ruby/2.2.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+ld: warning: directory not found for option '-L/Users/haven/.sm/pkg/active/lib'
+
+current directory: /Users/edward/Sites/jekyll/jekyll-image-gallery-example-gh-pages/_vendor/bundle/ruby/2.2.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/bin/install -m 0755 ruby_http_parser.bundle ./.gem.20170803-9854-vtshl1

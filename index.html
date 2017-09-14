@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="container">
+
+	<!-- LATEST -->
+	{% assign galleries = site.galleries | sort: 'title' | reverse %}
+	{% for gallery in galleries limit:1 %}
+	<div class='row gallery' style='margin-bottom:40px;'>
+		<div class='col-xs-12'>
+			<a href="{{ gallery.url | prepend:site.baseurl | prepend:site.url }}">
+				<h1>{{ gallery.title }}</h1>
+			</a>
+		</div>
+
+		{% for category in site.data.categories %}
+			<div class='col-xs-12'>
+				<h3 style='text-transform:capitalize;'>{{ category.name }}</h3>
+				<hr>
+			</div>
+			{% for image in site.static_files %}
+				{% assign new_var = gallery.title | append: '/' | append: category.name %}
+				{% if image.path contains new_var %}
+				<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}' title=''>
+					<img class='img-responsive img-thumb' src='{{ site.baseurl }}{{ image.path }}' alt='{{ image.path }}' />
+				</a>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	</div>
+	{% endfor %}
+
+	<!-- ARCHIVE -->
+	<div class='archive'>
+		<h1>Archive</h1>
+		{% assign galleries = site.galleries | sort: 'title' | reverse %}
+		{% for gallery in galleries %}
+		<a href="{{ gallery.url | prepend:site.baseurl | prepend:site.url }}">
+			<h2>{{ gallery.title }}</h2>
+		</a>
+		{% endfor %}
+	</div>
+
+</div>
+
+{% include pagination.html %}

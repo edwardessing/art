@@ -1,0 +1,151 @@
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+/* main */
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+
+	&::before {
+		display: block;
+	}
+}
+
+html {
+	box-sizing: border-box;
+    overflow: auto;
+	height: auto;
+}
+
+::selection {
+	background: black;
+	color: white;
+	text-shadow:none;
+}
+
+a {
+	outline: none !important
+}
+
+a:hover {
+	// text-decoration: none;
+	color: inherit !important;
+}
+
+*, p,
+h1, h2, h3,
+h4, h5, h6 {
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	font-variant-ligatures: contextual no-historical-ligatures common-ligatures;
+}
+
+hr {
+	border: 1px solid;
+	border-color: inherit;
+
+	& .post-nav {
+		margin-bottom: 0;
+	}
+}
+
+#container {
+	min-height: 100vh;
+}
+
+/*------------------------------------------------------------------------------------*/
+/* gallery */
+/*------------------------------------------------------------------------------------*/
+
+.gallery img {
+	// max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* pagination */
+
+.pagination {
+	margin: 0 auto;
+	padding: 30px 10px;
+	text-align: center;
+	list-style: none;
+
+	li {
+		display: inline-block;
+		margin: 6px 8px;
+		font-size: 16px !important;
+
+		&.active {
+			text-decoration: underline;
+		}
+
+		> * {
+			padding: 10px;
+			text-decoration: none;
+		}
+	}
+}
+
+/*------------------------------------------------------------------------------------*/
+/* pagination */
+/*------------------------------------------------------------------------------------*/
+
+.post-nav {
+	width: 100%;
+	cursor: pointer;
+
+	table {
+		width: 100%;
+		table-layout: fixed;
+
+		td {
+			width: 33%;
+			padding: 15px 0;
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+			// color: inherit;
+			font-size: 14px;
+
+			span {
+				display: none;
+			}
+		}
+
+		.return {
+			text-align: center;
+
+			a {
+				font-size: 30px;
+			}
+		}
+
+		.next {
+			text-align: right;
+		}
+	}
+}
+
+#next {
+	background: inherit;
+	width: 75%;
+	margin: 24px auto 0;
+	padding: 24px;
+	bottom: 0;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	z-index: 99;
+	border: none;
+	outline: none;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/

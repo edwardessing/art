@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class='container'>
+
+	<h1>{{ page.title }}</h1>
+	{% for category in site.data.categories %}
+	<div class='row gallery' style='margin-bottom:40px;'>
+		<div class='col-sm-12'>
+			<h3 style='text-transform:capitalize;'>{{ category.name }}</h3>
+			<hr>
+		</div>
+		{% for image in site.static_files %}
+			{% assign new_var = page.title | append: '/' | append: category.name %}
+			{% if image.path contains new_var %}
+			<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}' title=''>
+				<img class='img-responsive img-thumb' src='{{ site.baseurl }}{{ image.path }}' alt='{{ image.path }}' />
+			</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+	{% endfor %}
+
+	{% include pagination.html %}
+
+</div>
