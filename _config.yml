@@ -8,9 +8,9 @@
 # Site settings
 title: jekyll portfolio
 email: edwardessing@gmail.com
-description:
-baseurl: ''
-url: '' # the base hostname & protocol for your site
+description: 'edward essing - art'
+baseurl: 'art.edwardessing.com'
+url: 'art.edwardessing.com' # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
