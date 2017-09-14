@@ -9,7 +9,7 @@
 title: jekyll portfolio
 email: edwardessing@gmail.com
 description: 'edward essing - art'
-baseurl: 'art.edwardessing.com'
+baseurl: ''
 url: '' # the base hostname & protocol for your site
 
 # Build settings
