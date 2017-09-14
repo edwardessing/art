@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: jekyll portfolio
+title: edward essing - art
 email: edwardessing@gmail.com
 description: 'edward essing - art'
 baseurl: ''
@@ -60,7 +60,7 @@ autopages:
 
 permalink: pretty
 
-exclude: [LICENSE-CODE.md, LICENSE-IMAGES, README.md, bower.json]
+exclude: [README.md, bower.json]
 
 # Assets
 # assets:
