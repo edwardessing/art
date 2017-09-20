@@ -1,0 +1,46 @@
+---
+pages:
+- _galleries/2017.md
+- _galleries/2016.md
+hide_body: false
+fields:
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: gallery
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: no_menu_item
+  label: No menu item
+  type: boolean
+  hidden: false
+  default: ''
+- name: support
+  label: Support
+  type: list
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: tags
+  label: Tags
+  type: tag_list
+  hidden: false
+  default: []
+- name: featured-image
+  label: Featured image
+  type: text
+  hidden: false
+  default: ''
+- name: homepage-thumbnail
+  label: Homepage thumbnail
+  type: text
+  hidden: false
+  default: ''
