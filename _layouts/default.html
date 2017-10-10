@@ -21,5 +21,8 @@ support: [jquery, gallery]
 				{% include footer.html %}
 			</div>
 		</div>
+	{% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
 	</body>
 </html>
