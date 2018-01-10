@@ -1,6 +1,18 @@
-<footer class='site-footer container'>
-	<p style='margin:100px auto;'>
+<footer class='site-footer container' style='margin:100px auto;'>
+	<!-- ARCHIVE -->
+	<div class='archive'>
+		<h2>Archive</h2>
+		{% assign galleries = site.galleries | sort: 'title' | reverse %}
+		{% for gallery in galleries %}
+		<a href="{{ gallery.url | prepend:site.baseurl | prepend:site.url }}">
+			<h3>{{ gallery.title }}</h3>
+		</a>
+		{% endfor %}
+	</div>
+	<br>
+	<p>
 		All enquiries:
 		<a href='mailto:edwardessing@gmail.com'>edwardessing@gmail.com</a> or 0488 201 202
 	</p>
+	<p><a href='https://www.instagram.com/edwardessing/'>Instagram</a></p>
 </footer>
