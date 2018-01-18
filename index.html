@@ -13,7 +13,7 @@ layout: default
 		{% for image in site.static_files %}
 			{% if image.path contains 'assets/selected' %}
 				<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}' title=''>
-					<img class='img-responsive img-thumb' src='{{ site.baseurl }}{{ image.path }}' alt='{{ image.path }}' />
+					<img class='img-responsive img-thumb' src='/{{ site.baseurl }}thumbnails{{ image.path }}' alt='{{ image.path }}' />
 				</a>
 			{% endif %}
 		{% endfor %}

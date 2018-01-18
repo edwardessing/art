@@ -62,21 +62,9 @@ permalink: pretty
 
 exclude: [README.md, bower.json]
 
-# Assets
-# assets:
-#   prefix: "/assets"
-#   digest: true
-#   assets:
-#     - "*.JPG"
-#     - "bundle.css"
-#   sources:
-#     - "css"
-#     - "js"
-#     - "assets"
-#   features:
-#     liquid: false
-#     integrity: false
-#     # This will add height and width attributes for an img tag.
-#     automatic_img_size: true
-#     # This will add the digest path as an alt attribute for an img tag.
-#     automatic_img_alt: true
+mini_magick:
+    thumbnail:
+        source: assets
+        destination: thumbnails/assets
+        resize: "50%"
+        gravity: "center"
