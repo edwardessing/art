@@ -9,8 +9,8 @@
 title: edward essing - art
 email: edwardessing@gmail.com
 description: 'edward essing - art'
-baseurl: '/edwardessing'
-url: 'http://edwardessing.com' # the base hostname & protocol for your site
+baseurl: ''
+url: '' # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
