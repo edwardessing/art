@@ -15,7 +15,7 @@ layout: default
 			{% assign new_var = page.title | append: '/' | append: category.name %}
 			{% if image.path contains new_var %}
 			<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}' title=''>
-				<img class='img-responsive img-thumb' src='/{{ site.baseurl }}thumbnails/images{{ image.path }}' alt='{{ image.path }}' />
+				<img class='img-responsive img-thumb' src='/thumbnails{{ image.path }}' alt='{{ image.path }}' />
 			</a>
 			{% endif %}
 		{% endfor %}

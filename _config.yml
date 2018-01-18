@@ -65,6 +65,6 @@ exclude: [README.md, bower.json]
 mini_magick:
     thumbnail:
         source: assets
-        destination: thumbnails/images/assets
+        destination: thumbnails/assets
         resize: "50%"
         gravity: "center"
