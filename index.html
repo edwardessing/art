@@ -11,23 +11,23 @@ gallery: selected
 			<h1>Selected</h1>
 		</div>
 
-<!-- 		{% for i in site.data.selected %}
+		{% for i in site.data.selected %}
 			{% capture path %}
 			{% asset "{{ i.path }}" @path %}
 			{% endcapture %}
 			<a href='{{ path }}' class='col-xs-12 col-sm-3 img'>
 				<img src='{{ path }}' class='img-responsive img-thumb' alt='{{ i.name }}'>
 			</a>
-		{% endfor %} -->
+		{% endfor %}
 
-		{% for image in site.static_files %}
+<!-- 		{% for image in site.static_files %}
 			{% if image.path contains 'selected' %}
 				<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}' title=''>
 					<img class='img-responsive img-thumb' src='{{ site.baseurl }}{{ image.path }}' alt='{{ image.path }}' />
 				</a>
 			{% endif %}
 		{% endfor %}
-
+ -->
 		<div class='col-xs-12'>
 			<a href="/galleries">
 				<hr>

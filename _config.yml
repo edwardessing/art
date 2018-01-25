@@ -62,9 +62,12 @@ permalink: pretty
 
 exclude: [README.md, bower.json]
 
-mini_magick:
-    thumbnail:
-        source: assets
-        destination: thumbnails/assets
-        resize: "50%"
-        gravity: "center"
+# Assets settings.
+assets:
+  source_maps: true
+  digest: true
+  compress:
+    css: false
+    js: false
+  sources:
+    - assets
