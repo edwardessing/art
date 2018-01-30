@@ -64,10 +64,8 @@ exclude: [README.md, bower.json]
 
 # Assets settings.
 assets:
-  source_maps: true
-  digest: true
-  compress:
-    css: false
-    js: false
-  sources:
-    - assets
+  sources       : [assets]
+  destination   : /assets
+  digest        : true
+  source_maps   : false
+  compression   : false
