@@ -11,19 +11,6 @@ gallery: selected
 			<h1>Selected</h1>
 		</div>
 
-<!-- 		{% for i in site.data.selected %}
-			{% capture path %}
-			{% asset "{{ i.path }}" magick:resize='300' @path %}
-			{% endcapture %}
-			<a href='{{ path }}' class='col-xs-12 col-sm-3 img'>
-				<img src='{{ path }}' class='img-responsive img-thumb' alt='{{ i.name }}'>
-			</a>
-		{% endfor %} -->
-
-<!-- 		{% for picture in site.data.selected %}
-			{% asset '{{ picture.path }}' magick:resize='400' %}
-		{% endfor %} -->
-
 		{% for image in site.static_files %}
 			{% if image.path contains 'selected' %}
 				<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}' title=''>
