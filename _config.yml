@@ -13,9 +13,7 @@ baseurl: ''
 url: '' # the base hostname & protocol for your site
 
 # Build settings
-highlighter: true
 markdown: kramdown
-permalink: pretty
 
 # Server Config options
 livereload: true     # You no longer need to include --livereload:
