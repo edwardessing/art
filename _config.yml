@@ -13,7 +13,9 @@ baseurl: ''
 url: '' # the base hostname & protocol for your site
 
 # Build settings
+highlighter: true
 markdown: kramdown
+permalink: pretty
 
 # Server Config options
 livereload: true     # You no longer need to include --livereload:
@@ -48,6 +50,10 @@ defaults:
       tags: []
       featured-image: ''
       homepage-thumbnail: ''
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
 
 # Collections
 collections:
@@ -64,8 +70,10 @@ exclude: [README.md, bower.json]
 
 # Assets settings.
 assets:
-  sources       : [assets]
-  destination   : /assets
-  digest        : true
-  source_maps   : false
-  compression   : false
+  source_maps: true
+  digest: true
+  compress:
+    css: false
+    js: false
+  sources:
+    - assets

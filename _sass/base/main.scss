@@ -17,14 +17,8 @@
 
 html {
 	box-sizing: border-box;
-    overflow: auto;
+	overflow: auto;
 	height: auto;
-}
-
-::selection {
-	background: black;
-	color: white;
-	text-shadow:none;
 }
 
 a {

@@ -20,12 +20,10 @@ gem 'jekyll', '3.7.2'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem 'jekyll-feed', '~> 0.6'
+   gem 'jekyll-feed'
    gem 'jekyll-livereload'
-   gem 'jekyll-paginate-v2'
    gem 'jekyll-sitemap'
    gem 'jekyll-assets'
-   gem 'mini_magick'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
