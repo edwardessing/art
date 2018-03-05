@@ -1,0 +1,41 @@
+---
+layout: default
+gallery: selected
+---
+
+<div class='container'>
+
+	<!-- SELECTED -->
+	<div class='row gallery' style='margin-bottom:40px;'>
+		<div class='col-xs-12'>
+			<h1>Selected</h1>
+		</div>
+
+<!-- 		{% for image in site.static_files %}
+			{% if image.path contains 'selected' %}
+				<a class='col-xs-12 col-sm-3 img' href='{{ image.path }}' title=''>
+					<img class='img-responsive img-thumb' src='{{ image.path }}' alt='{{ image.path }}' />
+				</a>
+			{% endif %}
+		{% endfor %} -->
+
+		{% for image in site.static_files %}
+			{% if image.path contains 'test' %}
+				{% unless image.path contains 'thumbs' %}
+					<a class='col-xs-12 col-sm-3 img' href='{{ image.path }}'>
+						{% assign name = image.path | remove: image.name %}
+						<img class='img-responsive img-thumb' src='/{{ name | append: "thumbs/" | append: image.name }}' alt='{{ image.name }}'>
+					</a>
+				{% endunless %}
+			{% endif %}
+		{% endfor %}
+
+		<div class='col-xs-12'>
+			<a href='/galleries'>
+				<hr>
+				<h2>View more</h2>
+			</a>
+		</div>
+	</div>
+
+</div>

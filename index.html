@@ -1,6 +1,7 @@
 ---
 layout: default
 gallery: selected
+title: selected
 ---
 
 <div class='container'>
@@ -11,20 +12,17 @@ gallery: selected
 			<h1>Selected</h1>
 		</div>
 
-		{% for image in site.static_files %}
-			{% if image.path contains 'selected' %}
-				<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}' title=''>
-					<img class='img-responsive img-thumb' src='{{ site.baseurl }}{{ image.path }}' alt='{{ image.path }}' />
-				</a>
-			{% endif %}
-		{% endfor %}
+		{% include gallery.html %}
 
+		{% assign galleries = site.galleries | sort: 'title' | reverse %}
+		{% for gallery in galleries limit:1 %}
 		<div class='col-xs-12'>
-			<a href='/galleries'>
+			<a href='/galleries/{{ gallery.title }}'>
 				<hr>
 				<h2>View more</h2>
 			</a>
 		</div>
+		{% endfor %}
 	</div>
 
 </div>

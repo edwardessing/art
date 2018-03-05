@@ -1,0 +1,11 @@
+{% for image in site.static_files %}
+	{% if image.path contains page.title %}
+		{% assign new_var = gallery.title | append: '/' | append: category.name %}
+		{% if image.path contains new_var %}
+			<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}'>
+				{% assign name = image.name | remove: image.extname %}
+				<img class='img-responsive img-thumb' src='{{ site.baseurl }}{{ image.path }}' alt='{{ name }}'' title='{{ name }}'>
+			</a>
+		{% endif %}
+	{% endif %}
+{% endfor %}
