@@ -12,7 +12,7 @@
 	position: fixed;
 	background: white !important;
 	font-size: 100% !important;
-	z-index: 9999;
+	z-index: 99;
 }
 	#menu * {
 		background: none;
@@ -34,7 +34,7 @@
 	text-align: center;
 	font-size: 60px;
 	line-height: 60px;
-	z-index: 9999;
+	z-index: 99;
 	padding: 0px;
 	border: 0px;
 
@@ -65,7 +65,7 @@
 	top: 0;
 	right: 0;
 	padding: 40px 0;
-	z-index: 999;
+	z-index: 9;
 	overflow: scroll;
 
 	@media #{$sm} {

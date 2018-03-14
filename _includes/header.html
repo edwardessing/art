@@ -1,6 +1,16 @@
 <header class="site-header">
 	<div id="menu"><a class="menu-link link col-var"></a>
 		<div class="dropdown">
+			<div class="archive-list" style="text-align: center;">
+				<h4>Archive</h4>
+				{% assign galleries = site.galleries | sort: 'title' | reverse %}
+				{% for gallery in galleries %}
+				<a href="{{ gallery.url | prepend:site.baseurl | prepend:site.url }}">
+					<p style="font-size:10px;">{{ gallery.title }}</p>
+				</a>
+				{% endfor %}
+			</div>
+			<hr style="width:50%;">
 			<div class="style-list">
 				<label for="styleSwitcher"></label>
 				<div id="styleSwitch" class="styleSwitch">
