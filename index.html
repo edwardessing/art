@@ -23,6 +23,26 @@ title: selected
 			</a>
 		</div>
 		{% endfor %}
+
+<!-- 		{% for image in site.static_files %}
+			{% if image.path contains '/selected' %}
+				{% capture height -%}
+					{{assets['[image.name]'].dimensions.height}}
+				{%- endcapture %}
+				{% capture width -%}
+					{{assets['[image.name]'].dimensions.width}}
+				{%- endcapture %}
+
+				<div class='col-xs-12'>
+					<a href='/galleries/{{ gallery.title }}'>
+						<hr>
+						<h2>View more</h2>
+					</a>
+				</div>
+				{% asset {{image.name}} @pic height="{{height}}" width="{{width}}" alt="{{image.name"}} %}
+
+			  {% endif %}
+		{% endfor %} -->
 	</div>
 
 </div>

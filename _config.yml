@@ -75,3 +75,4 @@ assets:
     js: false
   sources:
     - assets
+    - assets/selected

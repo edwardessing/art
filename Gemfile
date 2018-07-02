@@ -22,6 +22,7 @@ gem 'jekyll', '3.7.3'
 group :jekyll_plugins do
    gem 'jekyll-sitemap'
    gem 'jekyll-assets'
+   gem 'mini_magick'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
