@@ -12,6 +12,13 @@ title: selected
 			<h1>Selected</h1>
 		</div>
 
+		{% for image in site.static_files %}
+			{% if image.path contains 'assets/_fullsize/selected' %}
+				<img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+			{% endif %}
+		{% endfor %}
+
+
 		{% include gallery.html %}
 
 		{% assign galleries = site.galleries | sort: 'title' | reverse %}
