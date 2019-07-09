@@ -57,7 +57,7 @@
 }
 
 .dropdown {
-	background: white !important;
+	background: lime !important;
 	display: none;
 	position: fixed;
 	width: 400px;
@@ -70,6 +70,10 @@
 
 	@media #{$sm} {
 		width: 100%;
+	}
+
+	* button {
+		background: white !important;
 	}
 }
 
