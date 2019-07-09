@@ -18,7 +18,7 @@ title: selected
 				{% if image.path contains new_var %}
 					<a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}'>
 						{% assign name = image.name | remove: image.extname %}
-						<img class='img-responsive img-thumb' src='{{ site.baseurl }}/thumbnail{{ image.path }}' alt='{{ name }}' title='{{ name }}'>
+						<img class='img-responsive img-thumb' src='{{ site.baseurl }}_site/thumbnail{{ image.path }}' alt='{{ name }}' title='{{ name }}'>
 					</a>
 				{% endif %}
 			{% endif %}
