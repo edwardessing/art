@@ -48,9 +48,6 @@ defaults:
       tags: []
       featured-image: ''
       homepage-thumbnail: ''
-      path: 'thumbnail/assets'
-    values:
-      image: true
 
 # Collections
 collections:
