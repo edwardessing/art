@@ -10,7 +10,15 @@ title: edward essing - art
 email: edwardessing@gmail.com
 description: 'edward essing - art'
 baseurl: ''
-url: '' # the base hostname & protocol for your site
+url: 'http://edwardessing.com' # the base hostname & protocol for your site
+
+plugins:
+  - jekyll-sitemap
+
+social:
+  name: Edward Essing
+  links:
+    - https://instagram.com/edwardessing/
 
 # Build settings
 markdown: kramdown
