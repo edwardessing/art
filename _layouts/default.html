@@ -10,10 +10,21 @@ support: [jquery, gallery]
 		<div class="page-content" id='container'>
 			<div class="container">
 				<div class='header row' style='margin:50px auto;'>
-					<div class='col-xs-12 col-sm-6 style='margin:10px auto;')>
+					<div class='col-xs-12 col-sm-6' style='margin:10px auto;')>
 						<a href='/'>Edward Essing &mdash; Art</a>
 					</div>
-					<div class='col-xs-12 col-sm-6' style='margin:10px auto; text-align:right;'>
+					{% assign galleries = site.galleries | sort: 'title' | reverse %}
+		{% for gallery in galleries limit:1 %}
+			<div class='col-xs-12 col-sm-2' style='margin:10px auto; text-align:center;'>
+			<a href='/galleries/{{ gallery.title }}'>
+				Archive</h4>
+			</a>
+		</div>
+		{% endfor %}
+					<div class='col-xs-12 col-sm-2' style='margin:10px auto; text-align:center;'>
+						<a href='/notes'>Sketches &amp; notes<sup>new</sup></a>
+					</div>
+					<div class='col-xs-12 col-sm-2' style='margin:10px auto; text-align:center;'>
 						<a href='/about'>About</a>
 					</div>
 				</div>

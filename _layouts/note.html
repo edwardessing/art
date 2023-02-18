@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class='container'>
+
+	<h1>{{ page.title }}</h1>
+	{% for category in site.data.notes %}
+	<div class='row gallery' style='margin-bottom:40px;'>
+		<div class='col-sm-12'>
+			<h3 style='text-transform:capitalize;'>{{ category.name }}</h3>
+			<hr>
+		</div>
+
+		{% include gallery.html %}
+	</div>
+	{% endfor %}
+			<h3><a href="/galleries/{{ page.title }}">{{ page.title }} archive gallery &rarr;</a></h3>
+
+
+</div>
+	{% include pagination_notes.html %}

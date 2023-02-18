@@ -2,13 +2,14 @@
 	<div id="menu"><a class="menu-link link col-var"></a>
 		<div class="dropdown">
 			<div class="archive-list" style="text-align: center;">
-				<h4>Archive</h4>
+				<h4><a href='/'>Home</a></h4>
 				{% assign galleries = site.galleries | sort: 'title' | reverse %}
-				{% for gallery in galleries %}
-				<a href="{{ gallery.url | prepend:site.baseurl | prepend:site.url }}">
-					<p style="font-size:10px;">{{ gallery.title }}</p>
-				</a>
-				{% endfor %}
+		{% for gallery in galleries limit:1 %}
+			<h4><a href='/galleries/{{ gallery.title }}'>Archive</a></h4>
+		{% endfor %}
+				<h4><a href='/notes'>Sketches &amp; notes</a></h4>
+				<h4><a href='/about'>About</a></h4>
+				
 			</div>
 			<hr style="width:50%;">
 			<div class="style-list">

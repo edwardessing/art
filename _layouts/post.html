@@ -1,16 +1,58 @@
 ---
 layout: default
+gallery: selected
+title: selected
 ---
-<!-- <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+<div class='container'>
 
-  <div class="post-content" itemprop="articleBody">
+  <!-- GALLERY -->
+  <div class='row gallery' style='margin-bottom:40px;'>
+    <div class='col-xs-12'>
+      <p>Update</p>
+      <h1>{{ page.title }}</h1>
     {{ content }}
+<br>
   </div>
 
-</article>
- -->
+    <h1>{{ page.title }}</h1>
+  {% for category in site.data.notes %}
+  <div class='row gallery' style='margin-bottom:40px;'>
+    <div class='col-sm-12'>
+      <h3 style='text-transform:capitalize;'>{{ category.name }}</h3>
+      <hr>
+    </div>
+
+    {% include gallery.html %}
+  </div>
+  {% endfor %}
+
+    {% for image in site.static_files %}
+      {% if image.path contains page.title %}
+        {% assign new_var = gallery.title | append: '/notes' | append: category.name %}
+        {% if image.path contains new_var %}
+          <a class='col-xs-12 col-sm-3 img' href='{{ site.baseurl }}{{ image.path }}'>
+            {% assign name = image.name | remove: image.extname %}
+            <img class='img-responsive img-thumb' src='{{ site.baseurl }}{{ image.path }}' alt='{{ name }}' title='{{ name }} - edward essing'>
+          </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <hr>
+
+  <div class="PageNavigation">
+    <div class='col-xs-6 col-sm-6' style="text-align:center;">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">&larr; Previous</a>
+  {% endif %}
+</div>
+    <div class='col-xs-6 col-sm-6' style="text-align:center;">
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">Next &rarr; </a>
+  {% endif %}
+</div>
+</div>
+
+</div>
